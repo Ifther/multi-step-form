@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="item-1">
+        <div class="background">
+          <img src="./assets/images/bg-sidebar-desktop.svg" alt="bg-sidebsr" />
+        </div>
+        <ul class="steps">
+          <div class="anchor-elements">
+            <a class="number-anchors pressed-bg" href="index.html">1</a>
+            <div>
+              <p>step 1</p>
+              <a href="index.html">YOUR INFO</a>
+            </div>
+          </div>
+          <div class="anchor-elements">
+            <a class="number-anchors" href="step-2.html">2</a>
+            <div>
+              <p>step 2</p>
+              <a href="step-2.html">SELECT PLAN</a>
+            </div>
+          </div>
+          <div class="anchor-elements">
+            <a class="number-anchors" href="step-3.html">3</a>
+            <div>
+              <p>step 3</p>
+              <a href="step-3.html">ADD-ONS</a>
+            </div>
+          </div>
+          <div class="anchor-elements">
+            <a class="number-anchors" href="step-4.html">4</a>
+            <div>
+              <p>step 4</p>
+              <a href="step-4.html">SUMMARY</a>
+            </div>
+          </div>
+        </ul>
+      </div>
+      <div class="plan-info">
+        <div>
+          <h1>Select your plan</h1>
+          <p>You have the option of mantly or yearly billing.</p>
+        </div>
+        <div class="plans">
+          <label for="arcade-radio-btn">
+            <div class="grid-items item-1">
+              <input type="radio" name="plan-info" id="arcade-radio-btn" />
+              <img
+                src="./assets/images/icon-arcade.svg"
+                alt="arcade-logo"
+                class="arcade-logo"
+              />
+              <h2>Arade</h2>
+              <p class="montly-amt">$9/mo</p>
+              <p class="yearly-amt hide-plan">
+                $90/yr <br />
+                <span>2 months free</span>
+              </p>
+            </div>
+          </label>
+          <label for="advance-radio-btn">
+            <div class="grid-items item-2">
+              <input type="radio" name="plan-info" id="advance-radio-btn" />
+              <img
+                src="./assets/images/icon-advanced.svg"
+                alt="advance-logo"
+                class="advance-logo"
+              />
+              <h2>Advance</h2>
+              <p class="montly-amt">$12/mo</p>
+              <p class="yearly-amt hide-plan">
+                $120/yr <br />
+                <span>2 months free</span>
+              </p>
+            </div>
+          </label>
+          <label for="pro-radio-btn">
+            <div class="grid-items item-3">
+              <input type="radio" name="plan-info" id="pro-radio-btn" />
+              <img
+                src="./assets/images/icon-pro.svg"
+                alt="pro-logo"
+                class="pro-logo"
+              />
+              <h2>Pro</h2>
+              <p class="montly-amt">$15/mo</p>
+              <p class="yearly-amt hide-plan">
+                $150/yr <br />
+                <span class="free-plan">2 months free</span>
+              </p>
+            </div>
+            </label>
+        </div>
+        <div class="time">
+          <label for="time-line-btn" class="montly"><p>Monthly</p></label>
+          <input type="checkbox" id="time-line-btn" />
+          <label for="time-line-btn " class="yearly"><p>Yearly</p></label>
+        </div>
+        <div>
+          <a class="go-back-btn" href="index.html">Go Back</a>
+          <a class="next-step-btn" href="step-3.html">Next Step</a>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

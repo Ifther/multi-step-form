@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* 1. Light or Regular Weight (e.g., 400) */
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("./assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* Speeds up page rendering */
+}
+
+/* 2. Medium Weight (e.g., 500) */
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("./assets/fonts/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 3. Bold Weight (e.g., 700) */
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("./assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "MyCustomFont";
+  line-height: 1.5;
+  font-weight: 500;
+  background-color: hsl(229, 24%, 87%);
+}
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+p {
+  color: hsl(231, 11%, 63%);
+  font: size 16px;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+label {
+  font-weight: 500;
+}
+#name-holder,
+#email-holder,
+#phone-no-holder {
+  display: block;
+  font-size: 20px;
+  width: 100%;
+  padding: 15px 15px;
+  border-radius: 10px;
+  border: 1px solid hsl(231, 11%, 63%);
+}
+input::placeholder {
+  font-size: 15px;
+}
+
+/* -whole container */
+.container {
+  max-width: 1000px;
+  width: 90%;
+  height: calc(100vh-40px);
+  margin: 20px auto;
+  border-radius: 10px;
+  display: flex;
+  gap: 100px;
+  background-color: white;
+  /* overflow: hidden; */
+}
+
+/* ----left block of container---- */
+.background img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+.steps {
+  top: 10%;
+  left: 15%;
+  display: flex;
+  position: absolute;
+
+  flex-direction: column;
+}
+
+.number-anchors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  align-self: center;
+  margin-right: 10px;
+  border: 1px solid hsl(206, 94%, 87%);
+  border-radius: 50%;
+}
+.anchor-elements {
+  display: flex;
+  margin: 15px 15px;
+}
+
+/* -----right block of container in index.html page */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.next-step-btn {
+  display: inline-block;
+  margin-left: 350px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: hsl(213, 96%, 18%);
+}
+
+.pressed-bg {
+  background-color: hsl(206, 94%, 87%);
+  color: black;
+}
+
+/* <---right block of container in step-2.html page----> */
+.plan-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+}
+
+.plan-info input[type="radio"] {
+  appearance: none;
+}
+.grid-items:has(input:checked) {
+  background-color: hsl(218, 100%, 97%);
+  border: 1px solid hsl(243, 100%, 62%);
+}
+
+.grid-items {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid hsl(218, 100%, 97%);
+  border-radius: 10px;
+}
+.grid-items img {
+  width: 50px;
+  margin-bottom: 50px;
+}
+.grid-items:hover {
+  border: 1px solid hsl(243, 100%, 62%);
+}
+
+.go-back-btn {
+  padding: 10px;
+  display: inline-block;
+  color: hsl(229, 24%, 87%);
+  border-radius: 5px;
+  background-color: hsl(218, 100%, 97%);
+}
+.go-back-btn:hover {
+  color: hsl(243, 100%, 62%);
+}
+.time {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background-color: hsl(231, 100%, 99%);
+}
+
+.time input[type="checkbox"] {
+  appearance: none;
+  width: 35px;
+  height: 20px;
+  background-color: hsl(213, 96%, 18%);
+  position: relative;
+  border-radius: 10px;
+}
+
+.time input[type="checkbox"]::before {
+  content: "";
+  background-color: white;
+  width: 15px;
+  height: 14px;
+  top: 3px;
+  left: 2px;
+  position: absolute;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+.time input[type="checkbox"]:checked::before {
+  transform: translateX(14px);
+}
+.time:has(input:not(:checked)) .montly p {
+  color: hsl(213, 96%, 18%);
+  /* border: 2px solid black; */
+}
+.time:has(input:checked) .yearly p {
+  color: hsl(213, 96%, 18%);
+}
+
+.hide-plan {
+  display: none;
+}
+span {
+  color: black;
+  font-weight: 400;
+}
+
+/* <---right block of container in step-3.html page---->  */
+h4 {
+  position: absolute;
+  font-size: 15px;
+  color: hsl(243, 100%, 62%);
+  right: 15px;
+  font-weight: 400;
+}
+.boxes input[type="checkbox"] {
+  appearance: none;
+  border: 2px solid hsl(229, 24%, 87%);
+  border-radius: 5px;
+  margin: 10px;
+  /* padding: 10px; */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  /* background-color: hsl(243, 100%, 62%); */
+}
+.boxes input[type="checkbox"]:checked {
+  background-color: hsl(243, 100%, 62%);
+  border: none;
+}
+.boxes input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: 2px solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.boxes:has(input:checked) {
+  border: 1px solid hsl(243, 100%, 62%);
+  background-color: hsl(231, 100%, 99%);
+}
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkboxes .boxes {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  height: 80px;
+  box-shadow: 4px 6px 10px -5px rgba(0, 0, 0, 0.29);
+  border: 1px solid hsl(218, 100%, 97%);
+  align-items: center;
+
+  border-radius: 10px;
+}
+
+.hiden-yr-amt {
+  display: none;
+}
+.checkboxes label,
+.checkboxes p {
+  margin: 0 20px 0 20px;
+}
